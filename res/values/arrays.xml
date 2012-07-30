@@ -1340,5 +1340,15 @@ from Locale.getDisplayName(). -->
         <item>4</item>
     </string-array>
 
-    <!-- **** CYANOGENMOD/ProjectElite EDITS END **** -->
+    <string-array name="lockscreen_battery_status_entries" translatable="false">
+        <item>@string/lockscreen_battery_status_charging</item>
+        <item>@string/lockscreen_battery_status_alwayson</item>
+    </string-array>
+
+    <string-array name="lockscreen_battery_status_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- **** NEXUS EVOLUTION EDITS END **** -->
 </resources>
