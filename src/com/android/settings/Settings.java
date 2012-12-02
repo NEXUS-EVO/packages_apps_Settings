@@ -121,7 +121,8 @@ public class Settings extends PreferenceActivity
             R.id.system_section,
             R.id.date_time_settings,
             R.id.about_settings,
-            R.id.accessibility_settings
+            R.id.accessibility_settings,
+            R.id.advanced_settings
     };
 
     private SharedPreferences mDevelopmentPreferences;
