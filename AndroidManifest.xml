@@ -1456,6 +1456,10 @@
         <activity android:name=".profiles.NFCProfileSelect" />
 
         <activity android:name=".cyanogenmod.PowerMenu" />
+        
+        <activity android:name=".evolution.ToolsActivity" />
+        
+        <activity android:name=".evolution.Blockad" />
 
         <activity android:name=".profiles.NFCProfile"
                 android:theme="@android:style/Theme.NoDisplay">

@@ -4397,13 +4397,24 @@
 
     <!-- CYANOGENMOD EDITS START -->
     
+    <!-- INTERFACE Settings  -->
+    <!-- Settings main menu category heading. Interface (Launcher, Themes, System). [CHAR LIMIT=40] -->
+    <string name="header_category_interface">EVOLUTION</string>
+    
     <!-- Header Strings -->
-    <string name="nav_bar">Navigation Bar</string>
-
-    <string name="ok">OK</string>
+    <string name="launcher_settings_title">Launcher</string>
+    <string name="lock_screen_title">Lock screen</string>
+    <string name="nav_bar">Navigation</string>
+    <string name="performance_settings_title">Performance</string>
+    <string name="profiles_settings_title">Profiles</string>
+    <string name="status_bar_title">Statusbar</string>
+    <string name="system_settings_title">System</string>
+    <string name="system_interface_title">System interface</string>
+    <string name="themes_settings_title">Themes</string>
+    <string name="tools">Tools</string>
+    <string name="quiet_hours_title">Quiet hours</string>
 
     <!-- Quiet hours -->
-    <string name="quiet_hours_title">Quiet hours</string>
     <string name="quiet_hours_summary">Configure the hours the device should be quiet</string>
     <string name="quiet_hours_note_title">Note</string>
     <string name="quiet_hours_note_summary">Incoming calls will behave like usual during quiet hours</string>
@@ -4428,6 +4439,16 @@
     <string name="quiet_hours_haptic_off">Haptic feedback will function as normal</string>
     <string name="quiet_hours_active_from">Active from</string>
     <string name="quiet_hours_active_to">to</string>
+    
+    <!-- clock stuff -->
+    <string name="right_clock">Right clock</string>
+    <string name="center_clock">Center clock</string>
+    <string name="no_clock">No clock</string>
+    <string name="dont_show">Don\'t show</string>
+    <string name="small_am_pm">Small AM/PM</string>
+    <string name="regular_am_pm">Regular AM/PM</string>
+    <string name="small_weekday">Small weekday</string>
+    <string name="regular_weekday">Regular weekday</string>
 
     <!-- time range preference -->
     <string name="start_time_title">Start</string>
@@ -4436,24 +4457,7 @@
     <!-- Hostname setting -->
     <string name="device_hostname">Device hostname</string>
 
-    <!-- INTERFACE Settings  -->
-    <!-- Settings main menu category heading. Interface (Launcher, Themes, System). [CHAR LIMIT=40] -->
-    <string name="header_category_interface">EVOLUTION</string>
-
-    <!-- Launcher settings  -->
-    <string name="launcher_settings_title">Launcher</string>
-
-    <!-- Themes settings  -->
-    <string name="themes_settings_title">Themes</string>
-
-    <!-- System Interface settings  -->
-    <string name="system_settings_title">System</string>
-    <string name="system_interface_title">System interface</string>
-
-    <string name="lock_screen_title">Lock screen</string>
-
     <!-- Profiles settings  -->
-    <string name="profiles_settings_title">Profiles</string>
     <string name="profiles_general_title">General</string>
     <string name="profiles_add">Add</string>
     <string name="profile_menu_delete">Delete</string>
@@ -4568,6 +4572,7 @@
     <!-- General Strings -->
     <string name="advanced_settings">Advanced settings</string>
     <string name="misc_short">Misc</string>
+    <string name="ok">OK</string>
     <string name="custom_app_icon_successfully">"'s icon set successfully!"</string>
     
     <!-- Shortcut picker -->
@@ -4575,16 +4580,6 @@
     <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
     <string name="select_custom_app_title">Select custom application</string>
     <string name="group_applications">Applications</string>
-    
-    <!-- clock stuff -->
-    <string name="right_clock">Right clock</string>
-    <string name="center_clock">Center clock</string>
-    <string name="no_clock">No clock</string>
-    <string name="dont_show">Don\'t show</string>
-    <string name="small_am_pm">Small AM/PM</string>
-    <string name="regular_am_pm">Regular AM/PM</string>
-    <string name="small_weekday">Small weekday</string>
-    <string name="regular_weekday">Regular weekday</string>
 
     <!-- Connection override toggles (not all are used at this time ) -->
     <string name="possibleButtons">Possible Buttons</string>
@@ -4603,9 +4598,6 @@
     <string name="toggleFlashlight">Flashlight</string>
     <string name="toggleLockScreen">Lock Screen</string>
     <string name="toggleWimax">WiMAX</string>
-
-    <!-- Performance settings  -->
-    <string name="performance_settings_title">Performance</string>
 
     <!-- Performance Settings : Warning dialog  -->
     <string name="performance_settings_warning_title">Proceed with Caution</string>
@@ -4776,7 +4768,6 @@
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
     <!-- Status bar  -->
-    <string name="status_bar_title">Status bar</string>
     <string name="status_bar_clock_title">Clock</string>
     <string name="status_bar_general_title">General</string>
     <string name="status_bar_show_clock_title">Show clock</string>
@@ -4855,14 +4846,6 @@
     <string name="glow_times_superquick">Super quick</string>
     <string name="glow_times_quick">Quick</string>
     <string name="glow_times_normal">Normal</string>
-    <string name="navbar_widgets_instructions">Swipe to view - Click to choose</string>
-    <string name="navbar_widgets_reset">Reset widgets</string>
-    <string name="navbar_widget_summary">Widget %1$s of %2$s</string>
-    <string name="navbar_widget_summary_add">Click to add Widget</string>
-    <string name="navbar_widgets_title">Configure widgets</string>
-    <string name="navbar_widgets_shiftLeft">Shift left</string>
-    <string name="navbar_widgets_shiftRight">Shift right</string>
-    <string name="navbar_widgets_delete">Delete widget</string>
     
     <!-- NavBar -->
     <string name="right">Right</string>
@@ -4951,6 +4934,12 @@
     <string name="interface_navring">Ring Targets</string>
     <string name="navbar_ring">Custom Ring Targets</string>
     <string name="navring_enable_long">Enable Longpress for navring</string>
+    
+    <!-- Tools -->
+    <string name="block_ads_title">Block Ads</string>
+    <string name="block_ads_summary_on">Most Ad hosts are now blocked</string>
+    <string name="block_ads_summary_off">Most Ad hosts are now visible</string>
+    <string name="general_settings_title">Advanced User Settings</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
