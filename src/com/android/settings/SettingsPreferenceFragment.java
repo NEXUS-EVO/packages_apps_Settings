@@ -20,6 +20,7 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -28,6 +29,7 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -47,10 +49,17 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
     private SettingsDialogFragment mDialogFragment;
 
     private String mHelpUrl;
+    
+    protected Context mContext;
+    
+    protected boolean mTablet;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        
+        mTablet = Settings.System.getBoolean(getContentResolver(), Settings.System.TABLET_UI, false);
+        mContext = getActivity().getApplicationContext();
 
         // Prepare help url and enable menu if necessary
         int helpResource = getHelpResource();
@@ -311,4 +320,7 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
         }
     }
 
+    public void setTitle(int resId) {
+        getActivity().setTitle(resId);
+    }
 }
