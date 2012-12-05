@@ -22,11 +22,11 @@ import android.preference.Preference;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class ToolsActivity extends SettingsPreferenceFragment {
+public class AdvancedSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.tools_activity);
+        addPreferencesFromResource(R.xml.advanced_settings);
     }
 }

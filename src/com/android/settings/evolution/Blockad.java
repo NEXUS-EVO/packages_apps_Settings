@@ -63,7 +63,7 @@ public class Blockad extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.tools_activity);
+        addPreferencesFromResource(R.xml.advanced_settings);
 
         /* Block Ads */
         mBlockAds = (SwitchPreference) findPreference(BLOCK_ADS);

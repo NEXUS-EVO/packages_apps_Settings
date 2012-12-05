@@ -14,16 +14,16 @@ limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/system_interface_title">
-
-        <SwitchPreference
-            android:key="blockads"
-            android:title="@string/block_ads_title"
-            android:summary="@string/block_ads_summary_off" />
         
         <PreferenceScreen
             android:key="performance_settings"
             android:title="@string/performance_settings_title"
-            android:fragment="com.android.settings.cyanogenmod.PerformanceSettings" />        
+            android:fragment="com.android.settings.cyanogenmod.PerformanceSettings" />
+            
+        <SwitchPreference
+            android:key="blockads"
+            android:title="@string/block_ads_title"
+            android:summary="@string/block_ads_summary_off" />            
             
 </PreferenceScreen>
 
