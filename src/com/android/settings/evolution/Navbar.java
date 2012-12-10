@@ -179,7 +179,7 @@ public class Navbar extends SettingsPreferenceFragment implements
         mButtonAlpha.setOnPreferenceChangeListener(this);
 
         // don't allow devices that must use a navigation bar to disable it
-        if (hasNavBarByDefault) {
+        if (hasNavBarByDefault || mTablet) {
             prefs.removePreference(mEnableNavigationBar);
         }
 
@@ -192,6 +192,9 @@ public class Navbar extends SettingsPreferenceFragment implements
         mNavigationBarWidth = (ListPreference) findPreference("navigation_bar_width");
         mNavigationBarWidth.setOnPreferenceChangeListener(this);
 
+        if (mTablet) {
+            prefs.removePreference(mNavBarMenuDisplay);
+        }
         refreshSettings();
         setHasOptionsMenu(true);
         updateGlowTimesSummary();
@@ -287,6 +290,7 @@ public class Navbar extends SettingsPreferenceFragment implements
             resetNavRing();
             resetNavRingLong();
             refreshSettings();
+            Helpers.restartSystemUI();
             return true;
         } else if (preference == mNavBarButtonQty) {
             int val = Integer.parseInt((String) newValue);
@@ -494,7 +498,7 @@ public class Navbar extends SettingsPreferenceFragment implements
                 String iconName = getIconFileName(mPendingIconIndex);
                 FileOutputStream iconStream = null;
                 try {
-                    iconStream = mContext.openFileOutput(iconName, Context.MODE_WORLD_READABLE);
+                    iconStream = getActivity().getApplicationContext().openFileOutput(iconName, Context.MODE_WORLD_READABLE);
                 } catch (FileNotFoundException e) {
                     return; // NOOOOO
                 }
@@ -516,7 +520,7 @@ public class Navbar extends SettingsPreferenceFragment implements
                         getContentResolver(),
                         Settings.System.NAVIGATION_CUSTOM_APP_ICONS[mPendingIconIndex],
                         Uri.fromFile(
-                                new File(mContext.getFilesDir(), iconName)).getPath());
+                                new File(getActivity().getApplicationContext().getFilesDir(), iconName)).getPath());
 
                 File f = new File(selectedImageUri.getPath());
                 if (f.exists())
@@ -544,8 +548,8 @@ public class Navbar extends SettingsPreferenceFragment implements
         PreferenceGroup targetGroup = (PreferenceGroup) findPreference("navbar_buttons");
         targetGroup.removeAll();
 
-        PackageManager pm = mContext.getPackageManager();
-        Resources res = mContext.getResources();
+        PackageManager pm = getActivity().getApplicationContext().getPackageManager();
+        Resources res = getActivity().getApplicationContext().getResources();
 
         for (int i = 0; i < navbarQuantity; i++) {
             final int index = i;
@@ -639,7 +643,7 @@ public class Navbar extends SettingsPreferenceFragment implements
 
         Bitmap d = ((BitmapDrawable) image).getBitmap();
         Bitmap bitmapOrig = Bitmap.createScaledBitmap(d, px, px, false);
-        return new BitmapDrawable(mContext.getResources(), bitmapOrig);
+        return new BitmapDrawable(getActivity().getApplicationContext().getResources(), bitmapOrig);
     }
 
     private Drawable getNavbarIconImage(int index, boolean landscape) {
@@ -673,7 +677,7 @@ public class Navbar extends SettingsPreferenceFragment implements
             }
         } else {
             try {
-                return mContext.getPackageManager().getActivityIcon(Intent.parseUri(uri, 0));
+                return getActivity().getApplicationContext().getPackageManager().getActivityIcon(Intent.parseUri(uri, 0));
             } catch (NameNotFoundException e) {
                 e.printStackTrace();
             } catch (URISyntaxException e) {
@@ -739,7 +743,7 @@ public class Navbar extends SettingsPreferenceFragment implements
                     String iconName = getIconFileName(mPendingNavBarCustomAction.iconIndex);
                     FileOutputStream iconStream = null;
                     try {
-                        iconStream = mContext.openFileOutput(iconName, Context.MODE_WORLD_READABLE);
+                        iconStream = getActivity().getApplicationContext().openFileOutput(iconName, Context.MODE_WORLD_READABLE);
                     } catch (FileNotFoundException e) {
                         return; // NOOOOO
                     }
@@ -752,7 +756,7 @@ public class Navbar extends SettingsPreferenceFragment implements
                             .putString(
                                     getContentResolver(),
                                     Settings.System.NAVIGATION_CUSTOM_APP_ICONS[mPendingNavBarCustomAction.iconIndex],
-                                    Uri.fromFile(mContext.getFileStreamPath(iconName)).toString());
+                                    Uri.fromFile(getActivity().getApplicationContext().getFileStreamPath(iconName)).toString());
                 }
             }
             mPendingNavBarCustomAction.preference.setSummary(friendlyName);

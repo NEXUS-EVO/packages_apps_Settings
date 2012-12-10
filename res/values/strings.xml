@@ -4935,12 +4935,6 @@
     <string name="interface_navring">Ring Targets</string>
     <string name="navbar_ring">Custom Ring Targets</string>
     <string name="navring_enable_long">Enable Longpress for navring</string>
-    
-    <!-- Tools -->
-    <string name="block_ads_title">Block Ads</string>
-    <string name="block_ads_summary_on">Most Ad hosts are now blocked</string>
-    <string name="block_ads_summary_off">Most Ad hosts are now visible</string>
-    <string name="general_settings_title">Advanced User Settings</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
