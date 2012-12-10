@@ -4411,6 +4411,7 @@
     <string name="system_settings_title">System</string>
     <string name="system_interface_title">System interface</string>
     <string name="themes_settings_title">Themes</string>
+    <string name="qs_title">Toggles</string>
     <string name="tools">Tools</string>
     <string name="quiet_hours_title">Quiet hours</string>
 
@@ -4758,11 +4759,9 @@
 
     <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="device_settings_title">Device options</string>
-    <string name="advanced_settings_title">Advanced settings</string>
-    
+    <string name="advanced_settings_title">Advanced settings</string>   
     <string name="advanced_system_settings_title">Advanced options</string>
     <string name="spareparts_settings_title">Spare Parts settings</string>
-    <string name="qs_title">Quick settings</string>
 
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Selector notification</string>
@@ -4937,4 +4936,46 @@
     <string name="navring_enable_long">Enable Longpress for navring</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
+
+    <string name="notification_convert_sound_to_vibration_title">Notification conversion</string>
+    <string name="notification_convert_sound_to_vibration_summary">Sounds to vibrations during vibrate mode</string>
+
+    <!-- Toggle Strings to be called from device overlays -->
+    <string name="toggle_airplane_mode">Airplane Mode</string>
+    <string name="toggle_auto_rotate">Auto Rotate</string>
+    <string name="toggle_bluetooth">Bluetooth</string>
+    <string name="toggle_fcharge">Fast Charge</string>
+    <string name="toggle_gps">GPS</string>
+    <string name="toggle_lte">LTE</string>
+    <string name="toggle_data">Data</string>
+    <string name="toggle_nfc">NFC</string>
+    <string name="toggle_silent">Silent</string>
+    <string name="toggle_swagger">Swagger</string>
+    <string name="toggle_sync">Sync</string>
+    <string name="toggle_torch">Torch</string>
+    <string name="toggle_2g">2G</string>
+    <string name="toggle_usb_tether">USB Tether</string>
+    <string name="toggle_vibrate">Vibrate</string>
+    <string name="toggle_wifi_tether">Tether</string>
+    <string name="toggle_wifi">Wi-Fi</string>
+    <string name="toggle_user">User</string>
+    <string name="toggle_settings">Settings</string>
+    <string name="toggle_signal">Signal</string>
+    <string name="toggle_clock">Clock</string>
+    <string name="toggle_ime">IME</string>
+    <string name="toggle_battery">Battery</string>
+    <string name="toggle_brightness">Brightness</string>
+    <string name="toggles_per_row_title">Toggles per row</string>
+    <string name="toggles_per_row_summary">Choose how many toggles to show per row</string>
+    <string name="enabled_toggles_title">Enabled toggles</string>
+    <string name="enabled_toggles_summary">Choose toggles to display</string>
+    <string name="toggles_order_title">Toggle order</string>
+    <string name="toggles_order_summary">Choose the order which your toggles are displayed</string>
+    <string name="title_statusbar_toggles">Statusbar Toggles</string>
+    <string name="toggles_display_dialog">Choose which toggles to use</string>
+    <string name="toggles_display_close">Close</string>
+    <string name="toggle_default_entries">USER|BRIGHTNESS|SETTINGS|WIFI|SIGNAL|ROTATE|BATTERY|AIRPLANE_MODE|BLUETOOTH</string>
+    <string name="toggle_favorite_contact">Favorite Contact</string>
+    <string name="toggle_favcontact_summary">Choose your favorite contact</string>
+    <string name="toggle_favcontact_title">Favorite contact</string>
 </resources>
