@@ -4402,6 +4402,8 @@
     <string name="header_category_interface">EVOLUTION</string>
     
     <!-- Header Strings -->
+    <string name="clock">Clock</string>
+    <string name="general_ui">General UI</string>
     <string name="launcher_settings_title">Launcher</string>
     <string name="lock_screen_title">Lockscreen</string>
     <string name="nav_bar">Navigation</string>
@@ -4448,9 +4450,27 @@
     <string name="dont_show">Don\'t show</string>
     <string name="small_am_pm">Small AM/PM</string>
     <string name="regular_am_pm">Regular AM/PM</string>
+    <string name="protekk_oclock">ProTekk O\'Clock</string>
     <string name="small_weekday">Small weekday</string>
     <string name="regular_weekday">Regular weekday</string>
+    
+    <!-- Statusbar | Clock -->
+    <string name="clock_title_enable">Clock style</string>
+    <string name="title_clock_ampm_entries">AM/PM style</string>
+    <string name="enable_clock_weekday">Day of the week</string>
+    <string name="enable_clock_weekday_summary">Abbreviated day of the week before the time</string>
+    <string name="colors">Colors</string>
+    <string name="clock_color_title">Clock color</string>
 
+    <!-- Status bar notification count -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display number of pending notifications</string>
+    
+    <!-- General UI  -->
+    <string name="custom_carrier_label_title">Custom carrier label</string>
+    <string name="custom_carrier_label_explain">Please enter a new label. Enter an empty label to revert to stock label.</string>
+    <string name="custom_carrier_label_notset">Custom label currently not set</string>
+    
     <!-- time range preference -->
     <string name="start_time_title">Start</string>
     <string name="end_time_title">End</string>
@@ -4583,11 +4603,10 @@
     <string name="set">Set</string>
     <string name="ics_color">Holo</string>
     
-    <!-- Menu Strings -->
-    <string name="menu_nav_bar_reset">Reset nav bar</string>
-    
     <!-- General Strings -->
-    <string name="advanced_settings">Advanced settings</string>
+    <!-- Advanced, Device specific (DeviceParts) settings  -->
+    <string name="device_settings_title">Device options</string>
+    <string name="advanced_settings_title">Advanced settings</string>   
     <string name="misc_short">Misc</string>
     <string name="ok">OK</string>
     <string name="custom_app_icon_successfully">"'s icon set successfully!"</string>
@@ -4834,35 +4853,9 @@
     <string name="power_menu_user_title">User switcher</string>
     <string name="power_menu_silent_title">Sound panel</string>
 
-    <!-- Advanced, Device specific (DeviceParts) settings  -->
-    <string name="device_settings_title">Device options</string>
-    <string name="advanced_settings_title">Advanced settings</string>   
-    <string name="advanced_system_settings_title">Advanced options</string>
-    <string name="spareparts_settings_title">Spare Parts settings</string>
-
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Selector notification</string>
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
-
-    <!-- Status bar  -->
-    <string name="status_bar_clock_title">Clock</string>
-    <string name="status_bar_general_title">General</string>
-    <string name="status_bar_show_clock_title">Show clock</string>
-    <string name="status_bar_am_pm_title">AM/PM style</string>
-    <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
-    <string name="status_bar_battery_title">Battery status style</string>
-    <string name="status_bar_signal_text_title">Signal status style</string>
-    <string name="status_bar_style_icon">Icon</string>
-    <string name="status_bar_style_icon_circle">Blade</string>
-    <string name="status_bar_style_hidden">Hidden</string>
-    <string name="status_bar_signal_text_show_text">Text</string>
-    <string name="status_bar_battery_status_percentage">Percentage</string>
-    <string name="status_bar_battery_status_circle">Circle</string>
-    <string name="status_bar_battery_status_circle_percentage">Circle with percentage</string>
-
-    <!-- Status bar notification count -->
-    <string name="status_bar_notif_count_title">Show notification count</string>
-    <string name="status_bar_notif_count_summary">Display number of pending notifications</string>
 
     <!-- Wakeup options -->
     <string name="display_category_wakeup_options_title">Wakeup options</string>
@@ -5012,6 +5005,9 @@
     <string name="interface_navring">Ring Targets</string>
     <string name="navbar_ring">Custom Ring Targets</string>
     <string name="navring_enable_long">Enable Longpress for navring</string>
+    
+    <!-- Menu Strings -->
+    <string name="menu_nav_bar_reset">Reset nav bar</string>
     
     <string name="notification_convert_sound_to_vibration_title">Notification conversion</string>
     <string name="notification_convert_sound_to_vibration_summary">Sounds to vibrations during vibrate mode</string>

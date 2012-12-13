@@ -1461,6 +1461,10 @@
 
         <activity android:name=".cyanogenmod.PowerMenu" />
         
+        <activity android:name=".evolution.StatusBarClock" />
+        
+        <activity android:name=".evolution.UserInterface" />
+        
         <activity android:name=".evolution.AdvancedSettings" />
 
         <activity android:name=".profiles.NFCProfile"
