@@ -18,7 +18,12 @@ limitations under the License.
         <PreferenceScreen
             android:id="@+id/statusbar_clock"
             android:title="@string/clock"
-            android:fragment="com.android.settings.evolution.StatusBarClock" />                               
+            android:fragment="com.android.settings.evolution.StatusBarClock" /> 
+            
+        <PreferenceScreen
+            android:id="@+id/statusbar_battery"
+            android:title="@string/battery"
+            android:fragment="com.android.settings.evolution.StatusBarBattery" />                                  
             
 </PreferenceScreen>
 

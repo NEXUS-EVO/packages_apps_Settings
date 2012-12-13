@@ -4402,6 +4402,7 @@
     <string name="header_category_interface">EVOLUTION</string>
     
     <!-- Header Strings -->
+    <string name="battery">Battery</string>
     <string name="clock">Clock</string>
     <string name="general_ui">General UI</string>
     <string name="launcher_settings_title">Launcher</string>
@@ -4442,6 +4443,23 @@
     <string name="quiet_hours_haptic_off">Haptic feedback will function as normal</string>
     <string name="quiet_hours_active_from">Active from</string>
     <string name="quiet_hours_active_to">to</string>
+    
+    <!-- Statusbar | Battery -->
+    <string name="battery_icon">Battery icon style</string>
+    <string name="battery_not_title">Battery icon in notifications</string>
+    <string name="battery_not_summary">Battery icon will show up where the clear all button shows up</string>
+    <string name="battery_bar">Battery bar location</string>
+    <string name="battery_bar_color">Battery bar color</string>
+    <string name="battery_bar_cat">Battery bar options</string>
+    <string name="battery_bar_style_title">Battery bar style</string>
+    <string name="battery_bar_thickness_title">Battery bar thickness</string>
+    <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
+    
+    <!-- Battery styles -->
+    <string name="icon_with_text">Icon with text</string>
+    <string name="icon_with_centered_text">Icon with centered text</string>
+    <string name="circlemod">Blade</string>
     
     <!-- clock stuff -->
     <string name="right_clock">Right clock</string>
@@ -5050,6 +5068,10 @@
     <string name="toggle_favorite_contact">Favorite Contact</string>
     <string name="toggle_favcontact_summary">Choose your favorite contact</string>
     <string name="toggle_favcontact_title">Favorite contact</string>
+    
+    <!-- toggle style -->
+    <string name="icon_only">Icon only</string>
+    <string name="text_only">Text only</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>

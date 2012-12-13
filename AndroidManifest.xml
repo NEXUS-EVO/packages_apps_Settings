@@ -1463,6 +1463,8 @@
         
         <activity android:name=".evolution.StatusBarClock" />
         
+        <activity android:name=".evolution.StatusBarBattery" />
+        
         <activity android:name=".evolution.UserInterface" />
         
         <activity android:name=".evolution.AdvancedSettings" />

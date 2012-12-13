@@ -228,7 +228,7 @@
 
     <!-- Advanced Settings -->
     <header
-        android:id="@+id/advanced_settings"
+        android:id="@+id/advanced_system"
         android:fragment="com.android.settings.evolution.AdvancedSettings"
         android:icon="@drawable/ic_settings_advanced"
         android:title="@string/advanced_settings_title" />
