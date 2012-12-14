@@ -23,7 +23,12 @@ limitations under the License.
         <PreferenceScreen
             android:id="@+id/statusbar_battery"
             android:title="@string/battery"
-            android:fragment="com.android.settings.evolution.StatusBarBattery" />                                  
+            android:fragment="com.android.settings.evolution.StatusBarBattery" />   
+            
+        <PreferenceScreen    
+            android:key="toggles"
+            android:title="@string/qs_title"
+            android:fragment="com.android.settings.evolution.StatusBarToggles" />                                   
             
 </PreferenceScreen>
 
