@@ -4624,7 +4624,8 @@
     <!-- General Strings -->
     <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="device_settings_title">Device options</string>
-    <string name="advanced_settings_title">Advanced settings</string>   
+    <string name="advanced_settings_title">Advanced settings</string>
+    <string name="advanced_settings">Advanced settings</string>    
     <string name="misc_short">Misc</string>
     <string name="ok">OK</string>
     <string name="custom_app_icon_successfully">"'s icon set successfully!"</string>

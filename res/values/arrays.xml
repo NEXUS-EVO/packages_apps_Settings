@@ -8,7 +8,7 @@
 ** you may not use this file except in compliance with the License.
 ** You may obtain a copy of the License at
 **
-**     http://www.apache.org/licenses/LICENSE-2.0
+** http://www.apache.org/licenses/LICENSE-2.0
 **
 ** Unless required by applicable law or agreed to in writing, software
 ** distributed under the License is distributed on an "AS IS" BASIS,
@@ -19,9 +19,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Choices for timezone picker first level.
-         These values will be used as search terms for TimeZone displayName
-         strings. --> <skip />
-    <!-- The time zone picker screen has two levels.  The first level allows the user to choose a region. -->
+These values will be used as search terms for TimeZone displayName
+strings. --> <skip />
+    <!-- The time zone picker screen has two levels. The first level allows the user to choose a region. -->
     <string-array name="timezone_filters">
     <!-- The next level of the time zoner picker should show time zones from the Americas. -->
         <item>America</item>
@@ -39,7 +39,7 @@
         <item>All</item>
     </string-array>
 
-    <!-- There is a setting to control the format of dates displayed throughout the system.  This is in the Date & Time Settings screen.  These will be adjusted to use punctuation appropriate to the user's locale. -->
+    <!-- There is a setting to control the format of dates displayed throughout the system. This is in the Date & Time Settings screen. These will be adjusted to use punctuation appropriate to the user's locale. -->
     <string-array name="date_format_values" translatable="false">
         <!-- The blank item means to use whatever the locale calls for. -->
         <item></item>
@@ -48,7 +48,7 @@
         <item>yyyy-MM-dd</item>
     </string-array>
 
-    <!-- Display settings.  The delay in inactivity before the screen is turned off. These are shown in a list dialog. -->
+    <!-- Display settings. The delay in inactivity before the screen is turned off. These are shown in a list dialog. -->
     <string-array name="screen_timeout_entries">
         <item>15 seconds</item>
         <item>30 seconds</item>
@@ -77,7 +77,7 @@
         <item>1800000</item>
     </string-array>
     
-    <!-- Display settings.  The delay in inactivity before the dream is shown. These are shown in a list dialog. -->
+    <!-- Display settings. The delay in inactivity before the dream is shown. These are shown in a list dialog. -->
     <string-array name="dream_timeout_entries">
         <item>Never</item>
         <item>15 seconds</item>
@@ -109,8 +109,8 @@
         <item>1800000</item>
     </string-array>
     
-    <!-- Security settings.  The delay after screen is turned off until device locks. 
-         These are shown in a list dialog. -->
+    <!-- Security settings. The delay after screen is turned off until device locks.
+These are shown in a list dialog. -->
     <string-array name="lock_after_timeout_entries">
         <item>Immediately</item>
         <item>5 seconds</item>
@@ -296,7 +296,7 @@
         <item>@string/wifi_security_psk_generic</item>
     </string-array>
 
-   <!-- Wi-Fi AP settings.  The type of security a Wi-Fi AP supports. -->
+   <!-- Wi-Fi AP settings. The type of security a Wi-Fi AP supports. -->
    <!-- Note that adding/removing/moving the items will need wifi settings code change. -->
     <string-array name="wifi_ap_security" translatable="false">
         <item>Open</item>
@@ -307,7 +307,7 @@
     </string-array>
 
     <!-- Match this with the constants in WifiDialog. --> <skip />
-    <!-- Wi-Fi settings.  The type of EAP method a Wi-Fi network has. -->
+    <!-- Wi-Fi settings. The type of EAP method a Wi-Fi network has. -->
     <string-array name="wifi_eap_method">
         <!-- Do not translate. -->
         <item>PEAP</item>
@@ -319,7 +319,7 @@
         <item>PWD</item>
     </string-array>
 
-   <!-- Wi-Fi WPS setup for p2p connections.  -->
+   <!-- Wi-Fi WPS setup for p2p connections. -->
    <!-- Note that adding/removing/moving the items will need wifi settings code change. -->
     <string-array name="wifi_p2p_wps_setup">
         <!-- Push button based configuration involves pushing a button on two connecting devices [CHAR LIMIT=30]-->
@@ -364,18 +364,18 @@
     <string-array name="wifi_sleep_policy_entries">
         <!-- Always keep Wi-Fi on when screen turns off. -->
         <item>Always</item>
-        <!-- Keep Wi-Fi on when screen turns off and plugged in.  When on battery, go to sleep when screen turns off. -->
+        <!-- Keep Wi-Fi on when screen turns off and plugged in. When on battery, go to sleep when screen turns off. -->
         <item>Only when plugged in</item>
         <!-- Do not keep Wi-Fi on when screen turns off. -->
         <item>Never (increases data usage)</item>
     </string-array>
 
     <!-- Wi-Fi settings. Presented as a list dialog to the user to choose the Wi-Fi sleep policy. Used when
-         the device is Wi-Fi-only. [CHAR LIMIT=30] -->
+the device is Wi-Fi-only. [CHAR LIMIT=30] -->
     <string-array name="wifi_sleep_policy_entries_wifi_only">
         <!-- Always keep Wi-Fi on when screen turns off. -->
         <item>Always</item>
-        <!-- Keep Wi-Fi on when screen turns off and plugged in.  When on battery, go to sleep when screen turns off. -->
+        <!-- Keep Wi-Fi on when screen turns off and plugged in. When on battery, go to sleep when screen turns off. -->
         <item>Only when plugged in</item>
         <!-- Do not keep Wi-Fi on when screen turns off, for Wi-Fi-only devices, no other data connection -->
         <item>Never</item>
@@ -471,8 +471,8 @@
     </string-array>
 
     <!-- Locales in this list are displayed with the corresponding
-         name from special_locale_names instead of using the name
-         from Locale.getDisplayName(). -->
+name from special_locale_names instead of using the name
+from Locale.getDisplayName(). -->
     <string-array translatable="false" name="special_locale_codes">
         <item>zh_CN</item>
         <item>zh_TW</item>
@@ -552,7 +552,7 @@
     <string-array name="long_press_timeout_selector_titles">
         <!-- A title for the option for short long-press timeout [CHAR LIMIT=25] -->
         <item>Short</item>
-        <!-- A title for the option for medium long-press timeout [CHAR LIMIT=25] -->        
+        <!-- A title for the option for medium long-press timeout [CHAR LIMIT=25] -->
         <item>Medium</item>
         <!-- A title for the option for long long-press timeout [CHAR LIMIT=25] -->
         <item>Long</item>
@@ -1288,43 +1288,43 @@
     </string-array>
     
     <!-- clock stuff -->
-	<string-array name="clock_style_entries">
-		<item>Right clock</item>
-		<item>Center clock</item>
-		<item>No clock</item>
-	</string-array>
+    <string-array name="clock_style_entries">
+        <item>Right clock</item>
+        <item>Center clock</item>
+        <item>No clock</item>
+    </string-array>
 
-	<string-array name="clock_style_values" translatable="false">
-		<item>1</item>
-		<item>2</item>
-		<item>0</item>
-	</string-array>
+    <string-array name="clock_style_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>0</item>
+    </string-array>
 
-	<string-array name="clock_ampm_entries">
-		<item>Don\'t show</item>
-		<item>Small AM/PM</item>
-		<item>Regular AM/PM</item>
-	</string-array>
+    <string-array name="clock_ampm_entries">
+        <item>Don\'t show</item>
+        <item>Small AM/PM</item>
+        <item>Regular AM/PM</item>
+    </string-array>
 
-	<string-array name="clock_ampm_values" translatable="false">
-		<item>2</item>
-		<item>1</item>
-		<item>0</item>
-	</string-array>
+    <string-array name="clock_ampm_values" translatable="false">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
 
-	<string-array name="clock_weekday_entries">
-		<item>Don\'t show</item>
-		<item>Small weekday</item>
-		<item>Regular weekday</item>
-	</string-array>
+    <string-array name="clock_weekday_entries">
+        <item>Don\'t show</item>
+        <item>Small weekday</item>
+        <item>Regular weekday</item>
+    </string-array>
 
-	<string-array name="clock_weekday_values" translatable="false">
-		<item>0</item>
-		<item>1</item>
-		<item>2</item>
-	</string-array>
-	
-	<!-- Battery styles -->
+    <string-array name="clock_weekday_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Battery styles -->
     <string-array name="battery_icon_entries" translatable="false">
         <item>@string/icon_only</item>
         <item>@string/text_only</item>

@@ -1,18 +1,18 @@
 /*
- * Copyright (C) 2012 The CyanogenMod Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+* Copyright (C) 2012 The CyanogenMod Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
 
 package com.android.settings.profiles;
 
@@ -231,8 +231,8 @@ public class ProfileConfig extends SettingsPreferenceFragment
                 StreamVolumePreference pref = new StreamVolumePreference(getActivity());
                 pref.setKey("stream_" + stream.mStreamId);
                 pref.setTitle(stream.mLabel);
-                pref.setSummary(getString(R.string.volume_override_summary) + " " + settings.getValue() 
-                        + "/" + am.getStreamMaxVolume(stream.mStreamId)); 
+                pref.setSummary(getString(R.string.volume_override_summary) + " " + settings.getValue()
+                        + "/" + am.getStreamMaxVolume(stream.mStreamId));
                 pref.setPersistent(false);
                 pref.setStreamItem(stream);
                 stream.mCheckbox = pref;
@@ -286,7 +286,7 @@ public class ProfileConfig extends SettingsPreferenceFragment
                 ProfileConnectionPreference pref = new ProfileConnectionPreference(getActivity());
                 pref.setKey("connection_" + connection.mConnectionId);
                 pref.setTitle(connection.mLabel);
-                pref.setSummary(settings.getValue() == 1 ? getString(R.string.connection_state_enabled) 
+                pref.setSummary(settings.getValue() == 1 ? getString(R.string.connection_state_enabled)
                         : getString(R.string.connection_state_disabled));
                 pref.setPersistent(false);
                 pref.setConnectionItem(connection);
@@ -304,7 +304,7 @@ public class ProfileConfig extends SettingsPreferenceFragment
                 UUID uuid = profileGroup.getUuid();
                 pref.setKey(uuid.toString());
                 pref.setTitle(mProfileManager.getNotificationGroup(uuid).getName());
-                //pref.setSummary(R.string.profile_summary);  // summary is repetitive, consider removing
+                //pref.setSummary(R.string.profile_summary); // summary is repetitive, consider removing
                 pref.setPersistent(false);
                 pref.setSelectable(true);
                 groupList.addPreference(pref);
