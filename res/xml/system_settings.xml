@@ -19,6 +19,11 @@
     android:title="@string/system_interface_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
     
+    <PreferenceScreen 
+            android:key="about_the_team"
+            android:title="@string/about_the_team"
+            android:fragment="com.android.settings.evolution.About" />
+    
     <PreferenceScreen
            android:key="@+id/statusbar_main"
            android:title="@string/statusbar"

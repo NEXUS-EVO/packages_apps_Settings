@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:evolution="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="learn_more"
+        android:title="@string/learn_more_title">
+        
+        <Preference
+            android:key="evolution_source"
+            android:title="@string/evolution_source_title"
+            android:summary="@string/evolution_source_summary" />
+
+        <Preference
+            android:key="darkhorse_website"
+            android:title="@string/darkhorse_website_title"
+            android:summary="@string/darkhorse_website_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="devs"
+        android:title="@string/devs">
+
+        <com.android.settings.widget.DeveloperPreference
+            android:title="@string/dev_evolution_title"
+            evolution:donateLink="@string/dev_gsxrdon_donate"
+            evolution:avatar="@drawable/avatar_evolution" />
+        
+        <com.android.settings.widget.DeveloperPreference
+            android:title="@string/dev_michael_title"
+            evolution:twitterHandle="@string/dev_michael_twitter"
+            evolution:donateLink="@string/dev_michael_donate"
+            evolution:avatar="@drawable/avatar_michael" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

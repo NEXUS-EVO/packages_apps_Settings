@@ -5115,6 +5115,21 @@
     <string name="lockscreen_buttons_previous">Previous song</string>
     <string name="lockscreen_buttons_playpause">Play/Pause music</string>
     <string name="lockscreen_buttons_toggle_sound">Toggle sound</string>
+    
+    <!-- about the team -->
+    <string name="about_the_team">About Evolution</string>
+    <string name="learn_more_title">Learn more about evolution</string>
+    <string name="devs">Meet the developers</string>
+    <string name="evolution_source_title">Evolution Source</string>
+    <string name="evolution_source_summary">Evolution is fully open source. You can always check out the latest source at github.com/NEXUS-EVOLUTION</string>
+    <string name="darkhorse_website_title">DarkHorse Theme</string>
+    <string name="darkhorse_website_summary">Visit thread for theme</string>
+    <string name="dev_evolution_title">GsxrDon</string>
+    <string name="dev_gsxrdon_donate">http://goo.gl/DxgZ0</string>
+    <string name="donate_cyanogenmod">http://forum.cyanogenmod.com/donate</string>
+    <string name="dev_michael_title">Michael Gunther</string>
+    <string name="dev_michael_twitter">Gunthermic</string>
+    <string name="dev_michael_donate">http://goo.gl/nT7LS</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 </resources>
