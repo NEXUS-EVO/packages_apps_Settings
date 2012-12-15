@@ -179,7 +179,7 @@ public class Navbar extends SettingsPreferenceFragment implements
         mButtonAlpha.setOnPreferenceChangeListener(this);
 
         // don't allow devices that must use a navigation bar to disable it
-        if (hasNavBarByDefault || mTablet) {
+        if (hasNavBarByDefault) {
             prefs.removePreference(mEnableNavigationBar);
         }
 
@@ -192,9 +192,6 @@ public class Navbar extends SettingsPreferenceFragment implements
         mNavigationBarWidth = (ListPreference) findPreference("navigation_bar_width");
         mNavigationBarWidth.setOnPreferenceChangeListener(this);
 
-        if (mTablet) {
-            prefs.removePreference(mNavBarMenuDisplay);
-        }
         refreshSettings();
         setHasOptionsMenu(true);
         updateGlowTimesSummary();
@@ -290,7 +287,6 @@ public class Navbar extends SettingsPreferenceFragment implements
             resetNavRing();
             resetNavRingLong();
             refreshSettings();
-            Helpers.restartSystemUI();
             return true;
         } else if (preference == mNavBarButtonQty) {
             int val = Integer.parseInt((String) newValue);
