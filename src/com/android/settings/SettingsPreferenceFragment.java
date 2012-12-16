@@ -58,7 +58,6 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         
-        mTablet = Settings.System.getBoolean(getContentResolver(), Settings.System.TABLET_UI, false);
         mContext = getActivity().getApplicationContext();
 
         // Prepare help url and enable menu if necessary
