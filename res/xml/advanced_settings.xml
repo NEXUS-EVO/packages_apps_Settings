@@ -20,5 +20,13 @@ limitations under the License.
             android:title="@string/performance_settings_title"
             android:fragment="com.android.settings.cyanogenmod.PerformanceSettings" />
             
+        <!-- Change Log -->
+        <PreferenceScreen android:key="changelog"
+                android:title="@string/changelog_title">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.settings"
+                    android:targetClass="com.android.settings.cyanogenmod.ChangeLog" />
+        </PreferenceScreen>    
+            
 </PreferenceScreen>
 
