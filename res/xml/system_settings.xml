@@ -35,6 +35,11 @@
            android:fragment="com.android.settings.evolution.UserInterface" />
     
     <PreferenceScreen
+            android:key="hardware_keys"
+            android:fragment="com.android.settings.cyanogenmod.HardwareKeys"
+            android:title="@string/hardware_keys_title" />
+    
+    <PreferenceScreen
         android:key="nav_bar"
         android:fragment="com.android.settings.evolution.Navbar"
         android:title="@string/nav_bar" />
