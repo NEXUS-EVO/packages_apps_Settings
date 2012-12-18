@@ -773,7 +773,7 @@ from Locale.getDisplayName(). -->
         <item>Always allow</item>
     </string-array>
 
-    <!-- **** CYANOGENMOD/PROJECT ELITE EDITS START **** -->
+    <!-- **** Nexus Evolution EDITS START **** -->
 
     <!-- Volume Overlay options. -->
     <string-array name="volume_overlay_entries">
