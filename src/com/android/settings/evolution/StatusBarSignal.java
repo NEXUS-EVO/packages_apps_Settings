@@ -1,5 +1,5 @@
 
-package com.android.settngs.evolution;
+package com.android.settings.evolution;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import android.os.Bundle;
