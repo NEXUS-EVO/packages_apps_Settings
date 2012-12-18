@@ -33,10 +33,8 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     
     private static final String TAG = "LockscreenInterface";
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
-    private static final String KEY_LOCKSCREEN_BUTTONS = "lockscreen_buttons";
     private static final String PREF_LOCKSCREEN_TEXT_COLOR = "lockscreen_text_color";
 
-    private PreferenceScreen mLockscreenButtons;
     private ListPreference mBatteryStatus;
     private ColorPickerPreference mLockscreenTextColor;
 
@@ -58,11 +56,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             mBatteryStatus.setValueIndex(batteryStatus);
             mBatteryStatus.setSummary(mBatteryStatus.getEntries()[batteryStatus]);
             mBatteryStatus.setOnPreferenceChangeListener(this);
-        }
-
-        mLockscreenButtons = (PreferenceScreen) findPreference(KEY_LOCKSCREEN_BUTTONS);
-        if (!hasButtons()) {
-            getPreferenceScreen().removePreference(mLockscreenButtons);
         }
         
         mLockscreenTextColor = (ColorPickerPreference) findPreference(PREF_LOCKSCREEN_TEXT_COLOR);
