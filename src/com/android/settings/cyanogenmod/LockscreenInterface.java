@@ -20,18 +20,25 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class LockscreenInterface extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener {   
+    
+    private static final boolean DEBUG = true;
+    
     private static final String TAG = "LockscreenInterface";
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
     private static final String KEY_LOCKSCREEN_BUTTONS = "lockscreen_buttons";
+    private static final String PREF_LOCKSCREEN_TEXT_COLOR = "lockscreen_text_color";
 
     private PreferenceScreen mLockscreenButtons;
     private ListPreference mBatteryStatus;
+    private ColorPickerPreference mLockscreenTextColor;
 
     public boolean hasButtons() {
         return !getResources().getBoolean(com.android.internal.R.bool.config_showNavigationBar);
@@ -57,6 +64,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         if (!hasButtons()) {
             getPreferenceScreen().removePreference(mLockscreenButtons);
         }
+        
+        mLockscreenTextColor = (ColorPickerPreference) findPreference(PREF_LOCKSCREEN_TEXT_COLOR);
+        mLockscreenTextColor.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -73,7 +83,15 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
                     Settings.System.LOCKSCREEN_ALWAYS_SHOW_BATTERY, value);
             mBatteryStatus.setSummary(mBatteryStatus.getEntries()[index]);
             return true;
+        } else if (preference == mLockscreenTextColor) {
+            String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String.valueOf(objValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                                    Settings.System.LOCKSCREEN_CUSTOM_TEXT_COLOR, intHex);
+            if (DEBUG) Log.d(TAG, String.format("new color hex value: %d", intHex));
+            return true;
         }
         return false;
     }
-}
+}      
