@@ -24,6 +24,11 @@
                     android:targetClass="@string/additional_system_update_menu" />
         </PreferenceScreen>
 
+        <PreferenceScreen 
+            android:key="about_the_team"
+            android:title="@string/about_the_team"
+            android:fragment="com.android.settings.evolution.About" /> 
+        
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status" 
