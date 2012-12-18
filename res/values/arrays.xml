@@ -1383,6 +1383,25 @@ from Locale.getDisplayName(). -->
         <item>PLAYPAUSE</item>
         <item>SOUND</item>
     </string-array>
+    
+    <string-array name="signal_style_entries" translatable="false">
+        <item>@string/show_signal_bars</item>
+        <item>@string/show_signal_text</item>
+        <item>@string/show_with_dbm</item>
+    </string-array>
+    <string-array name="signal_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="wifi_signal_style_entries" translatable="false">
+        <item>@string/show_signal_bars</item>
+        <item>@string/show_signal_text</item>
+    </string-array>
+    <string-array name="wifi_signal_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
 
     <!-- **** NEXUS EVOLUTION EDITS END **** -->
 </resources>

@@ -4445,6 +4445,7 @@
     <string name="quiet_hours_active_to">to</string>
     
     <!-- Statusbar | Battery -->
+    <string name="signal">Signal</string>
     <string name="battery_icon">Battery icon style</string>
     <string name="battery_not_title">Battery icon in notifications</string>
     <string name="battery_not_summary">Battery icon will show up where the clear all button shows up</string>
@@ -4471,6 +4472,21 @@
     <string name="protekk_oclock">ProTekk O\'Clock</string>
     <string name="small_weekday">Small weekday</string>
     <string name="regular_weekday">Regular weekday</string>
+    
+    <!-- Statusbar | Signal -->
+    <string name="signal_style">Signal text style</string>
+    <string name="signal_color_title">Signal color</string>
+    <string name="hide_signal_title">Hide signal bars</string>
+    <string name="hide_signal_summary">Updates when signal strength changes</string>
+    <string name="wifi_signal_style">WiFi signal text style</string>
+    <string name="wifi_signal_color_title">WiFi signal color</string>
+    <string name="alt_signal_title">Alt signal layout</string>
+    <string name="alt_signal_summary">Use alternate (GB style) signal cluster</string>
+    
+    <!-- signal style -->
+    <string name="show_signal_bars">Show signal bars</string>
+    <string name="show_signal_text">Show signal text</string>
+    <string name="show_with_dbm">Show with dBm</string>
     
     <!-- Statusbar | Clock -->
     <string name="clock_title_enable">Clock style</string>

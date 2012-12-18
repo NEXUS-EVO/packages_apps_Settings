@@ -1471,6 +1471,8 @@
         
         <activity android:name=".evolution.AdvancedSettings" />
         
+        <activity android:name=".evolution.StatusBarSignal" />
+        
         <activity android:name=".evolution.About" />
 
         <activity android:name=".profiles.NFCProfile"
