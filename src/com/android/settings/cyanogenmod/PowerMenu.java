@@ -34,6 +34,7 @@ public class PowerMenu extends SettingsPreferenceFragment {
     private static final String KEY_SCREENSHOT = "power_menu_screenshot";
     private static final String KEY_PROFILES = "power_menu_profiles";
     private static final String KEY_AIRPLANE = "power_menu_airplane";
+    private static final String KEY_EXPANDED_DESKTOP = "power_menu_expanded_desktop";
     private static final String KEY_USER = "power_menu_user";
     private static final String KEY_SILENT = "power_menu_silent";
 
@@ -43,6 +44,7 @@ public class PowerMenu extends SettingsPreferenceFragment {
     private CheckBoxPreference mScreenshotPref;
     private CheckBoxPreference mProfilesPref;
     private CheckBoxPreference mAirplanePref;
+    private CheckBoxPreference mExpandedDesktopPref;
     private CheckBoxPreference mUserPref;
     private CheckBoxPreference mSilentPref;
     CheckBoxPreference mShowNavBarHide;
@@ -74,6 +76,10 @@ public class PowerMenu extends SettingsPreferenceFragment {
         mAirplanePref.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.POWER_MENU_AIRPLANE_ENABLED, 1) == 1));
 
+        mExpandedDesktopPref = (CheckBoxPreference) findPreference(KEY_EXPANDED_DESKTOP);
+        mExpandedDesktopPref.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 0) == 1));
+        
         mUserPref = (CheckBoxPreference) findPreference(KEY_USER);
         if (!UserHandle.MU_ENABLED
             || !UserManager.supportsMultipleUsers()) {
@@ -116,6 +122,11 @@ public class PowerMenu extends SettingsPreferenceFragment {
             value = mAirplanePref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.POWER_MENU_AIRPLANE_ENABLED,
+                    value ? 1 : 0);
+       } else if (preference == mExpandedDesktopPref) {
+            value = mExpandedDesktopPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED,
                     value ? 1 : 0);
        } else if (preference == mUserPref) {
             value = mUserPref.isChecked();
