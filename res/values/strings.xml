@@ -4461,6 +4461,8 @@
     <string name="icon_with_text">Icon with text</string>
     <string name="icon_with_centered_text">Icon with centered text</string>
     <string name="circlemod">Blade</string>
+    <string name="status_bar_battery_status_cyanogenmod_circle">CM Circle</string>
+	<string name="status_bar_battery_status_cyanogenmod_circle_percentage">CM Circle with percentage</string>
     
     <!-- clock stuff -->
     <string name="right_clock">Right clock</string>
