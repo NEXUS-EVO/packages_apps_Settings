@@ -1472,6 +1472,10 @@
         <activity android:name=".evolution.StatusBarSignal" />
         
         <activity android:name=".evolution.About" />
+        
+        <activity android:name=".util.ShowBuildProp" />
+        
+        <activity android:name=".evolution.PropModder" />
 
         <activity android:name=".profiles.NFCProfile"
                 android:theme="@android:style/Theme.NoDisplay">

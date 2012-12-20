@@ -18,7 +18,13 @@ limitations under the License.
         <PreferenceScreen
             android:key="performance_settings"
             android:title="@string/performance_settings_title"
-            android:fragment="com.android.settings.cyanogenmod.PerformanceSettings" />               
+            android:fragment="com.android.settings.cyanogenmod.PerformanceSettings" /> 
+            
+        <!-- BuildProp Modder -->
+        <PreferenceScreen
+            android:key="buildprop_modder"
+            android:fragment="com.android.settings.evolution.PropModder"
+            android:title="@string/propmodder_title" />                  
             
 </PreferenceScreen>
 
