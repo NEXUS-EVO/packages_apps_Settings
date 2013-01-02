@@ -11,6 +11,8 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceCategory;
+import android.preference.CheckBoxPreference;
+import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
@@ -30,14 +32,20 @@ public class UserInterface extends SettingsPreferenceFragment {
     private static final String PREF_STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String PREF_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
+    private static final String KEY_POWER_BUTTON_TORCH = "power_button_torch";
 
     CheckBoxPreference mStatusBarNotifCount;
     private CheckBoxPreference mStatusBarBrightnessControl;
     Preference mCustomLabel;
+    private CheckBoxPreference mPowerButtonTorch;
     private PreferenceCategory mPrefCategoryGeneral;
 
     String mCustomLabelText = null;
 
+    private boolean torchSupported() {
+        return getResources().getBoolean(R.bool.has_led_flash);
+    }
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +79,16 @@ public class UserInterface extends SettingsPreferenceFragment {
         if (Utils.isTablet(getActivity())) {
             mPrefCategoryGeneral.removePreference(mStatusBarBrightnessControl);
         }
+        
+        mPowerButtonTorch = (CheckBoxPreference) findPreference(KEY_POWER_BUTTON_TORCH);
+        if (torchSupported()) {
+            mPowerButtonTorch.setChecked((Settings.System.getInt(getActivity().
+                    getApplicationContext().getContentResolver(),
+                    Settings.System.POWER_BUTTON_TORCH, 0) == 1));
+        } else {
+            getPreferenceScreen().removePreference(mPowerButtonTorch);
+        }
+
 
     }
 
@@ -87,6 +105,11 @@ public class UserInterface extends SettingsPreferenceFragment {
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
             return true;   
+        } else if (preference == mPowerButtonTorch) {
+                   boolean enabled = mPowerButtonTorch.isChecked();
+            Settings.System.putInt(getContentResolver(), Settings.System.POWER_BUTTON_TORCH,
+                    enabled ? 1 : 0);
+            return true;
         } else if (preference == mCustomLabel) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 
