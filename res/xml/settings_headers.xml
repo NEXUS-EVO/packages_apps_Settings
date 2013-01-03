@@ -65,7 +65,7 @@
     <header
         android:id="@+id/system_settings"
         android:icon="@drawable/ic_settings_system"
-        android:fragment="com.android.settings.cyanogenmod.SystemSettings"
+        android:fragment="com.android.settings.evolution.SystemSettings"
         android:title="@string/system_settings_title" />
 
     <!-- Themes -->
