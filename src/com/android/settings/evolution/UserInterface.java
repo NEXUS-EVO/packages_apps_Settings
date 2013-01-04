@@ -88,8 +88,6 @@ public class UserInterface extends SettingsPreferenceFragment {
         } else {
             getPreferenceScreen().removePreference(mPowerButtonTorch);
         }
-
-
     }
 
     @Override

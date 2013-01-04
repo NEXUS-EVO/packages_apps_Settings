@@ -77,6 +77,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     private static final String NAVIGATION_BAR_WIDTH = "navigation_bar_width";
     private static final String PREF_NAVRING_AMOUNT = "pref_navring_amount";
     private static final String ENABLE_NAVRING_LONG = "enable_navring_long";
+    private static final String PREF_MENU_ARROWS = "navigation_bar_menu_arrow_keys";
 
     public static final int REQUEST_PICK_CUSTOM_ICON = 200;
     public static final int REQUEST_PICK_LANDSCAPE_ICON = 201;
@@ -101,6 +102,7 @@ public class Navbar extends SettingsPreferenceFragment implements
     ListPreference mNavigationBarWidth;
     SeekBarPreference mButtonAlpha;
     CheckBoxPreference mEnableNavringLong;
+    CheckBoxPreference mMenuArrowKeysCheckBox;
 
     private int mPendingIconIndex = -1;
     private NavBarCustomAction mPendingNavBarCustomAction = null;
@@ -192,6 +194,10 @@ public class Navbar extends SettingsPreferenceFragment implements
         mNavigationBarWidth = (ListPreference) findPreference("navigation_bar_width");
         mNavigationBarWidth.setOnPreferenceChangeListener(this);
 
+        mMenuArrowKeysCheckBox = (CheckBoxPreference) findPreference(PREF_MENU_ARROWS);
+	    mMenuArrowKeysCheckBox.setChecked(Settings.System.getBoolean(getContentResolver(),
+			    Settings.System.NAVIGATION_BAR_MENU_ARROW_KEYS, true));
+        
         refreshSettings();
         setHasOptionsMenu(true);
         updateGlowTimesSummary();
@@ -227,7 +233,6 @@ public class Navbar extends SettingsPreferenceFragment implements
                         Settings.System.NAVIGATION_LONGPRESS_ACTIVITIES[1], "**null**");
                 Settings.System.putString(getActivity().getContentResolver(),
                         Settings.System.NAVIGATION_LONGPRESS_ACTIVITIES[2], "**null**");
-
                 Settings.System.putString(getActivity().getContentResolver(),
                         Settings.System.NAVIGATION_CUSTOM_APP_ICONS[0], "");
                 Settings.System.putString(getActivity().getContentResolver(),
@@ -265,6 +270,11 @@ public class Navbar extends SettingsPreferenceFragment implements
             ft.replace(this.getId(), fragment);
             ft.commit();
             return true;
+        } else if (preference == mMenuArrowKeysCheckBox) {
+			Settings.System.putBoolean(getActivity().getContentResolver(),
+			        Settings.System.NAVIGATION_BAR_MENU_ARROW_KEYS,	
+			        ((CheckBoxPreference) preference).isChecked() ? true : false);
+			return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
